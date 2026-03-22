@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 public class CredentialController {
 
     private final CredentialService credentialService;
@@ -30,8 +30,8 @@ public class CredentialController {
     }
 
     @PostMapping("/refresh")
-    public ResponseEntity<RefreshResponse> refresh(@RequestHeader("Authorization") String header) {
-        RefreshResponse response = credentialService.refresh(header);
+    public ResponseEntity<RefreshResponse> refresh(@Valid @RequestBody RefreshRequest request) {
+        RefreshResponse response = credentialService.refresh(request);
         return ResponseEntity.ok(response);
     }
 

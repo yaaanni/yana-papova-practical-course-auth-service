@@ -49,8 +49,8 @@ public class CredentialService {
         throw new UserNotAuthenticated("User not authenticated");
     }
 
-    public RefreshResponse refresh(String header) {
-        String refreshToken = header.substring(7);
+    public RefreshResponse refresh(RefreshRequest request) {
+        String refreshToken = request.getRefreshToken();
         if (!jwtService.validateToken(refreshToken)
                 || !"refresh".equals(jwtService.extractTokenType(refreshToken))) {
             throw new InvalidTokenException("Invalid token");

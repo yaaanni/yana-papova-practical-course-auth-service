@@ -50,7 +50,8 @@ public class SecurityConfig {
         return http
                 .csrf(customizer -> customizer.disable())
                 .authorizeHttpRequests(request -> request
-                        .requestMatchers("/auth/**")
+                        .requestMatchers("/actuator/**").permitAll()
+                        .requestMatchers("/api/auth/**")
                         .permitAll()
                         .anyRequest().authenticated())
                 .sessionManagement(session ->
