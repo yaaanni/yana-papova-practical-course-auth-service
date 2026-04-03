@@ -1,0 +1,37 @@
+2026/02/12 23:45:29 INFO  - jmeter.util.JMeterUtils: Setting Locale to en_US 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: Loading user properties from: /usr/share/jmeter/bin/user.properties 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: Loading system properties from: /usr/share/jmeter/bin/system.properties 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: Copyright (c) 1998-2015 The Apache Software Foundation 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: Version 2.13.19691222 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: java.version=25.0.1 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: os.name=Linux 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: os.arch=amd64 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: os.version=6.14.0-36-generic 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: file.encoding=UTF-8 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: Default Locale=English (United States) 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: JMeter  Locale=English (United States) 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: JMeterHome=/usr/share/jmeter 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: user.dir  =/home/yana/Intership/AuthService 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: PWD       =/home/yana/Intership/AuthService 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: IP: 127.0.1.1 Name: yana FullName: yana 
+2026/02/12 23:45:29 INFO  - jmeter.gui.action.LookAndFeelCommand: Using look and feel: javax.swing.plaf.metal.MetalLookAndFeel [Metal, CrossPlatform] 
+2026/02/12 23:45:29 INFO  - jmeter.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties 
+2026/02/12 23:45:30 INFO  - jmeter.engine.util.CompoundVariable: Note: Function class names must contain the string: '.functions.' 
+2026/02/12 23:45:30 INFO  - jmeter.engine.util.CompoundVariable: Note: Function class names must not contain the string: '.gui.' 
+2026/02/12 23:45:30 FATAL - jmeter.JMeter: An error occurred:  java.lang.reflect.InaccessibleObjectException: Unable to make field private static java.lang.String sun.awt.X11.XToolkit.awtAppClassName accessible: module java.desktop does not "opens sun.awt.X11" to unnamed module @707f7052
+	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:353)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:329)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:277)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:179)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:173)
+	at org.apache.jmeter.gui.MainFrame.setWindowTitle(MainFrame.java:808)
+	at org.apache.jmeter.gui.MainFrame.init(MainFrame.java:512)
+	at org.apache.jmeter.gui.MainFrame.<init>(MainFrame.java:219)
+	at org.apache.jmeter.JMeter.startGui(JMeter.java:242)
+	at org.apache.jmeter.JMeter.start(JMeter.java:387)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.apache.jmeter.NewDriver.main(NewDriver.java:264)
+
+2026/02/12 23:45:30 INFO  - jmeter.util.BSFTestElement: Registering JMeter version of JavaScript engine as work-round for BSF-22 
